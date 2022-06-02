@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 str ="""
 Beautiful is better than ugly.
 Explicit is better than implicit.
