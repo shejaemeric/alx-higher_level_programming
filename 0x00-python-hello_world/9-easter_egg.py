@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-str =
-"""
+str ="""
 	Beautiful is better than ugly.
 	Explicit is better than implicit.
 	Simple is better than complex.
@@ -21,3 +20,4 @@ str =
 	If the implementation is easy to explain, it may be a good idea.
 	Namespaces are one honking great idea -- let's do more of those!
 """
+print(str)
