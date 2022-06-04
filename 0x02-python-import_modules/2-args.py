@@ -5,9 +5,9 @@ if __name__ == "__main__":
         for index in range(1, num+1):
             print("{:d}: {:s}".format(index,lis[index]))
     argv_count = len(argv)
-    if argv_count is 1:
+    if argv_count == 1:
         print("{:d} arguments.".format(argv_count))
-    elif argv_count is 2:
+    elif argv_count == 2:
         print("{:d} argument:".format(argv_count))
         printArgs(sys.argv,argv_count)
     else:
