@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 def replace_in_list(my_list, idx, element):
-    count = len(my_list)
-    for x in reverse(range(0, count)):
+    for x in reversed(my_list):
         print("{:d}".format(x))
