@@ -6,3 +6,4 @@ def multiple_returns(sentence):
     else:
         first = sentence[0]
     new = (count,first)
+    return new
