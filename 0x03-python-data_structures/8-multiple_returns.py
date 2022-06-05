@@ -5,5 +5,5 @@ def multiple_returns(sentence):
         first = "None"
     else:
         first = sentence[0]
-    new = (count,first)
+    new = (count, first)
     return new
