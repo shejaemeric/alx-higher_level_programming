@@ -13,4 +13,3 @@ def best_score(a_dictionary):
         return(res)
     else:
         return None
-
