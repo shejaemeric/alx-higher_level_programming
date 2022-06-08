@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary is None:
-        return None
-    else:
+    if not a_dictionary:
         a_list = list(a_dictionary)
         count = len(a_list)
         max = a_dictionary.get(a_list[0])
@@ -13,3 +11,6 @@ def best_score(a_dictionary):
                 max = next
                 res = x
         return(res)
+    else:
+        return None
+
