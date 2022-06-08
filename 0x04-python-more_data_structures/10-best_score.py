@@ -12,4 +12,4 @@ def best_score(a_dictionary):
             if next > max:
                 max = next
                 res = x
-        print(res)
+        return(res)
