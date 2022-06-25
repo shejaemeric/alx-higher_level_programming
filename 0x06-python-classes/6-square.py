@@ -7,6 +7,7 @@ class Square:
     get size,get area, print square..."""
     __size
     __position
+
     def size(self):
         """ function that returns size of a square /
         needs no arguement"""
