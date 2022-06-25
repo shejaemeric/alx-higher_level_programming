@@ -1,5 +1,4 @@
-"""this module is for a class square wich will be used to
- get/set class data and peform methods on the document"""
+"""this module is for a class square"""
 #!/usr/bin/python3
 
 

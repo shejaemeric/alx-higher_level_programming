@@ -1,5 +1,4 @@
-"""this module is for a class square wich will be used to 
-get/set class data and peform methods on the document"""
+"""this module is for a class square"""
 #!/usr/bin/python3
 
 
@@ -55,6 +54,6 @@ class Square:
         for i in range(0, area):
             for y in range(start, area):
                 if y < 0:
-                    print(" ",end = "")
+                    print(" ", end="")
                 else:
-                    print('#', end = "")
+                    print('#', end="")
