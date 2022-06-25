@@ -21,7 +21,7 @@ class Square:
             raise valueError("size must be >= 0")
         self.__size = value
 
-    def __init__(self,size=0):
+    def __init__(self, size=0):
         """ function used to initialize class and needs the
         size as arguments then returns nothing"""
         if type(size) == int:

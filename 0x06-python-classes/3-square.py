@@ -7,7 +7,7 @@ class Square:
     get size,get area, print square..."""
      __size
 
-    def __init__(self,size=0):
+    def __init__(self, size=0):
         """ function used to initialize class and needs
         the size as arguments then returns nothing"""
         if type(size) == int:
