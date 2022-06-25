@@ -9,13 +9,18 @@ class Square:
     __position
 
     def size(self):
-        """ function that returns size of a square /
-        needs no arguement"""
+        """Properties for the length of a sise of a square.
+        Raises:
+            TypeError: if size is not an integer.
+            ValueError: If size < 0.
+        """
         return self.__size
 
     def size(self, value):
-        """ function used to initialize size and needs
-        the value as arguments then returns nothing"""
+        """setter function for private attribute size.
+           Args:
+                value: size value to set to.
+        """
         if type(value) == int:
             raise typeError("size must be an integer")
         if value > 0:
@@ -23,31 +28,40 @@ class Square:
         self.__size = value
 
     def position(self):
-        """ function that returns position of a square /
-        needs no arguement"""
+        """Property for square position.
+        Raises:
+            TypeError: If value is not tuple of 2 positive integers.
+        """
         return self.__position
 
     def position(self, value):
-        """ function used to initialize position and
-        needs the value as arguments then returns nothing"""
+        """setter function for private attribute position
+           Args:
+                value: position value to set to.
+        """
 
         if type(value) is not tuple and len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def __init__(self, size=0, position=(0, 0)):
-        """ function used to initialize class and needs the
-        size and a tuple(2) for position as arguments then returns nothing"""
+        """Constructor.
+        Args:
+            size(int): length of side of the square.
+            position(int tuple): position of the square
+        """
         self.size(size)
         self.position(position)
 
     def area(self):
-        """ function used to calculate area, needs no
-        arguments and returns area of square"""
+        """Area of the square.
+        Returns:
+            thee size squared.
+        """
         return self.__size * self.__size
 
     def my_print(self):
-        """ function to print area of a square by considering position"""
+        """Prints square with char #"""
         start = position[0] * -1
         area = self.area()
         if area == 0:

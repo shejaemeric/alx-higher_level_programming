@@ -8,8 +8,13 @@ class Square:
     __size
 
     def __init__(self, size=0):
-        """ function used to initialize class and needs
-        the size as arguments then returns nothing"""
+        """Constructor.
+        Args:
+            size: length of side of the square.
+        Raises:
+            TypeError: if size is not an integer.
+            ValueError: If size < 0.
+        """
         if type(size) == int:
             raise typeError("size must be an integer")
         if size > 0:
@@ -17,6 +22,8 @@ class Square:
         self.__size = size
 
     def area(self):
-        """ function used to calculate area, needs no
-        arguments and returns area of square"""
+        """Area of the square.
+        Returns:
+            thee size squared.
+        """
         return self.__size * self.__size
