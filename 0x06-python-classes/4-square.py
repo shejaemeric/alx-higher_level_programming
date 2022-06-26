@@ -15,7 +15,7 @@ class Square:
         """
         self.__size = size
 
-    @Property
+    @property
     def size(self):
         """Area of the square.
         Returns:
