@@ -13,6 +13,7 @@ class Square:
             TypeError: if size is not an integer.
             ValueError: If size < 0.
         """
+        __size
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
