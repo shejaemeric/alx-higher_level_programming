@@ -5,8 +5,6 @@
 class Square:
     """defines a square"""
 
-    __size
-
     def size(self):
         """Area of the square.
         Returns:
