@@ -4,7 +4,7 @@
 
 class Square:
     """defines a square"""
-    
+
     __size
     __position
 
@@ -21,7 +21,7 @@ class Square:
            Args:
                 value: size value to set to.
         """
-        if type(value) == int:
+        if type(value) != int:
             raise typeError("size must be an integer")
         if value > 0:
             raise valueError("size must be >= 0")

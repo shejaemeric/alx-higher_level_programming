@@ -4,7 +4,7 @@
 
 class Square:
     """defines a square"""
-    
+
     __size
 
     def size(self):
@@ -19,7 +19,7 @@ class Square:
         Returns:
             thee size squared.
         """
-        if type(value) == int:
+        if type(value) != int:
             raise typeError("size must be an integer")
         if value > 0:
             raise valueError("size must be >= 0")
@@ -33,7 +33,7 @@ class Square:
             TypeError: if size is not an integer.
             ValueError: If size < 0.
         """
-        if type(size) == int:
+        if type(size) != int:
             raise typeError("size must be an integer")
         if size > 0:
             raise valueError("size must be >= 0")
