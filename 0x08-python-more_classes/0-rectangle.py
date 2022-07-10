@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""
-Contains a definition for an empty Class Rectangle.
-"""
+"""this is a module for a rectangle class"""
 
 
 class Rectangle:
-    """Empty class"""
+    """my rectangle class"""
     pass
