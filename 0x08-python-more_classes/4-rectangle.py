@@ -98,14 +98,17 @@ class Rectangle:
         Returns:
             rectangle represented in #.
         """
-        rect = []
-        if self.__height == 0 or self.__width == 0:
+        w = self.__width
+        h = self.__height
+        if self.__width == 0 or self.__height == 0:
             return ""
-        for n in range(0, self.__height):
-            rect.append("#" * self.__width)
-            if n != self.__height - 1:
-                rect.append('\n')
-        return ''.join(rect)
+        while (h > 0):
+            while (w > 0):
+                print("#", end="")
+                w -= 1
+            if (h != 1):
+                print('\n')
+        h -= 1
 
     def __repr__(self):
         """
