@@ -105,13 +105,11 @@ class Rectangle:
         h = self.__height
         if self.__width == 0 or self.__height == 0:
             return ""
-        while (h > 0):
-            while (w > 0):
-                print("#", end="")
-                w -= 1
-            if (h != 1):
+        for x in range(0, h):
+            for y in range(0, w):
+                print("#", end='')
+            if h != 1:
                 print()
-        h -= 1
 
     def __repr__(self):
         """
