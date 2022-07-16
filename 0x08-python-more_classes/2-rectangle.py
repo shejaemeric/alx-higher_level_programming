@@ -50,7 +50,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """ 
+        """
         return height property
         Returns:
             height (int)
@@ -80,7 +80,7 @@ class Rectangle:
             area (int) : area of a rectangle
         """
         return self.__height * self.__width
-        
+
     def perimeter(self):
         """
         calculate perimeter of a rectangle

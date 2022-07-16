@@ -50,7 +50,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """ 
+        """
         return height property
         Returns:
             height (int)
