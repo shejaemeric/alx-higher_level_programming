@@ -110,7 +110,7 @@ class Rectangle:
                 w -= 1
             if (h != 1):
                 print()
-            h -= 1
+        h -= 1
 
     def __repr__(self):
         """
