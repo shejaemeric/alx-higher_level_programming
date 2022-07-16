@@ -116,6 +116,7 @@ class Rectangle:
         Returns:
             string
         """
-        msg = '{type(self).__name__}'
-        msg += '({self.__width},{self.__height})'.format(self=self)
-        return msg
+        w = self.__width
+        h = self.__height
+        c = type(self).__name__
+        return '{c},({w},{h})'.format(self=self)
