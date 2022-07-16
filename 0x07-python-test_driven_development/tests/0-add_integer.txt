@@ -1,0 +1,74 @@
+The 0-add_integer test module Using "add_integer" function
+=======================================
+
+Import function from module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test one int argument:
+    >>> add_integer(1)
+    99
+
+Test one float argument:
+    >>> add_integer(1.2)
+    99.2
+
+Test two int arguments:
+    >>> add_integer(1,2)
+    3
+
+Test two int arguments:
+    >>> add_integer(-1,2)
+    1
+
+Test two int arguments:
+    >>> add_integer(1,-2)
+    -1
+
+Test two float arguments:
+    >>> add_integer(1.3,2.5)
+    3.8
+
+Test one int and one float arguments:
+    >>> add_integer(1.5,2)
+    3.5
+
+Test one other and one int arguments:
+    >>> add_integer("hello",2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test one other and one int arguments:
+    >>> add_integer(1,"hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test two other arguments:
+    >>> add_integer("hello","there")
+        Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test 2 long ints:
+	>>> add_integer(11111111, 22222222)
+	33333333
+
+Add infinity:
+	>>> add_integer(float('inf'), float(-inf))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer.
+
+Add NaN:
+	>>> add_integer(1, float('Nan')
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer.
+
+Test float overflow:
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+        ...
+	OverflowError: cannot convert float infinity to int.
