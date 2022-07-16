@@ -11,7 +11,7 @@ print("--")
 print(hex(id(my_rectangle)))
 print("--")
 
-# create new instance based on representation
+# create new instance based on representation biased
 new_rectangle = eval(repr(my_rectangle))
 print(str(new_rectangle))
 print("--")
