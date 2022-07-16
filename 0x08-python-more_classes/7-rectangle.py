@@ -107,9 +107,10 @@ class Rectangle:
             return ""
         while (h > 0):
             while (w > 0):
-                print(Rectangle.print_symbol, end="")
+                print("#", end="")
                 w -= 1
-            print()
+            if (h != 1):
+                print()
             h -= 1
 
     def __repr__(self):
