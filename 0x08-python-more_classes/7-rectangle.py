@@ -98,10 +98,11 @@ class Rectangle:
         """
         prints the rectangle with #
         """
+        symbol = self.print_symbol
         rect = []
         for x in range(0, self.height):
             for y in range(0, self.width):
-                rect.append('#')
+                rect.append(str(symbol))
             if x != self.height-1:
                 rect.append('\n')
         return ''.join(rect)
