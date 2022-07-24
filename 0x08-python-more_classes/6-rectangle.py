@@ -95,20 +95,15 @@ class Rectangle:
 
     def __str__(self):
         """
-        represent the ractangle.
-
-        Returns:
-            rectangle represented in #.
+        prints the rectangle with #
         """
-        w = self.__width
-        h = self.__height
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        for x in range(0, h):
-            for y in range(0, w):
-                print("#", end='')
-            if h != 1:
-                print()
+        rect = []
+        for x in range(0, self.height):
+            for y in range(0, self.width):
+                rect.append('#')
+            if x != self.height-1:
+                rect.append('\n')
+        return ''.join(rect)
 
     def __repr__(self):
         """
@@ -116,10 +111,8 @@ class Rectangle:
         Returns:
             string
         """
-        w = self.__width
-        h = self.__height
-        c = type(self).__name__
-        return '{c},({w},{h})'.format(self=self)
+        return '{self.__class__.__name__}({self.width}, {self.height})'.\
+            format(self=self)
 
     def __del__(self):
         """
