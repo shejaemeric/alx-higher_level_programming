@@ -8,19 +8,13 @@ def add_integer(a, b=98):
         Returns:
             int
     """
-    if not isinstance(a,int):
-        if not isinstance(a,float):
-            raise TypeError("a must be an integer")
-        else:
-            num1 = int(a)
+    if type(a) not in (float, int):
+        raise TypeError("a must be an integer")
 
-    if not isinstance(b,int):
-        if not isinstance(b,float):
-            raise TypeError("b must be an integer")
-        else:
-            num2 = int(b)
+    if type(b) not in (float, int):
+        raise TypeError("b must be an integer")
 
-    return a+b
+    return int(a) + int (b)
 
 if __name__ == "__main__":
     import doctest
