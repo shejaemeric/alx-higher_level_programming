@@ -1,0 +1,26 @@
+5-text_indentation test module using text_indentation function.
+===================================================
+
+import function from module
+
+text_indentation = __import__(5-text_indentation).text_indentation
+
+test passing text <string>:
+    >>> text_indentation("test?one:two")
+    Traceback (most recent call last):
+    ...
+test passing text <string> blankspace:
+    >>> text_indentation("   ")
+
+
+test passing text <string> only ???:
+    >>> text_indentation("???")
+
+test passing text <string> leading and trailing whitespace:
+    >>> text_indentation("  ?  ")
+
+test passing nothing:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

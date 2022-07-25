@@ -1,0 +1,48 @@
+4-print_square test module using "print_square" function
+
+========================================================
+
+import function from module:
+
+>>> print_square = __import__("4-print_square").print_square
+
+test passing size <int>:
+    >>> print_square(4)
+    ####
+    <BLANKLINE>
+    ####
+    <BLANKLINE>
+    ####
+    <BLANKLINE>
+    ####
+    <BLANKLINE>
+
+test passing size <int> < 0:
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+test passing size <float>:
+    >>> print_square(4.6)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test passing size <float> and size < 0:
+    >>> print_square(-4.6)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test passing nothing:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+test passing size <other type>:
+    >>> print_square("hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
