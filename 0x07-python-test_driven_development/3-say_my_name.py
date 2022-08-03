@@ -2,8 +2,6 @@
 """
 module to print first name and last name
 """
-import string
-
 
 def say_my_name(first_name, last_name=""):
     """
