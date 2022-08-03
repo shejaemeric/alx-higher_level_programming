@@ -9,13 +9,9 @@ import function from module:
 test passing size <int>:
     >>> print_square(4)
     ####
-    <BLANKLINE>
     ####
-    <BLANKLINE>
     ####
-    <BLANKLINE>
     ####
-    <BLANKLINE>
 
 test passing size <int> < 0:
     >>> print_square(-4)
