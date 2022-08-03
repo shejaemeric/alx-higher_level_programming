@@ -33,8 +33,8 @@ Test first_name empty:
 
 
 Test just spaces:
-    >>> say_my_name("   ","  ")
-    My name is   
+	>>> say_my_name("   ", "   ")
+	My name is   
 
 test passing nothing:
     >>> say_my_name()
