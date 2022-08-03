@@ -2,6 +2,8 @@
 """
     module for MyList class and its attributes
 """
+
+
 class MyList(list):
 
     """MyList class
@@ -10,6 +12,7 @@ class MyList(list):
         List (class): inherit from list class
     """
     def print_sorted(self):
+
         """
             print_sorted : prints sorted list.
 
