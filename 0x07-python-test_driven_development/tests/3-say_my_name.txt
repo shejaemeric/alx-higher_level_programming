@@ -7,24 +7,31 @@ ________________________________________________________________________________
 
 Import Module:
 	>>> say_my_name = __import__('3-say_my_name').say_my_name
-    
-========================================================
 
+____________________________________________________________________________________
 Test basic:
 	>>> say_my_name("hello", "there")
 	My name is hello there
 
-Test first_name:
-    >>> say_my_name("SHEJA")
-    My name is SHEJA 
+Test firstname:
+	>>> say_my_name("hello")
+	My name is hello 
 
-Test last_name empty:
-    >>> say_my_name("Sheja","")
-    My name is Sheja
+Test lastname empty:
+	>>> say_my_name("hello", "")
+	My name is hello 
 
-Test first_name empty:
-    >>>say_my_name("","Emeric")
-    My name is Emeric
+Test both names empty:
+	>>> say_my_name("", "")
+	My name is  
+
+Test just spaces:
+	>>> say_my_name("   ", "   ")
+	My name is        
+
+Test empty firstname:
+	>>> say_my_name("", "hello")
+	My name is  hello
 
 Test both names empty:
     >>> say_my_name("","")
