@@ -21,5 +21,6 @@ class MyList(list):
         for c in self:
             if not isinstance(c, int):
                 raise TypeError("Element of a list must be an integer")
-        self.sort()
-        print(self)
+        newList = self[:]
+        newList.sort()
+        print(newList)
