@@ -49,4 +49,4 @@ Test equal elements in list:
     >>> my_list.print_sorted()
     Traceback (most recent call last):
     ...
-    Element of a list must be an integer
+    TypeError: Element of a list must be an integer
