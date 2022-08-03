@@ -31,11 +31,8 @@ Test just spaces:
     My name is
 
 Test first_name empty:
-    >>>say_my_name("","there")
+    >>> say_my_name("","there")
     My name is there
-
-
-
 
    
 test passing nothing:
