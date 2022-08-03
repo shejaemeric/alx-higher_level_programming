@@ -8,8 +8,8 @@ import function from module:
 ========================================================
 
 Test basic:
-    >>> say_my_name("SHEJA", "EMERIC")
-    My name is SHEJA EMERIC
+	>>> say_my_name("hello", "there")
+	My name is hello there
 
 Test first_name:
     >>> say_my_name("SHEJA")
