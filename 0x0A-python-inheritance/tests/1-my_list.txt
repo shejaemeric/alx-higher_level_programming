@@ -6,7 +6,7 @@ Supposed to print a sorted list
 ---------------------------------------------------
 
 Import class:
-    >>> MyList = __import__("1-my_list.").MyList
+    >>> MyList = __import__("1-my_list").MyList
 
 Test basic:
     >>> my_list = MyList()
