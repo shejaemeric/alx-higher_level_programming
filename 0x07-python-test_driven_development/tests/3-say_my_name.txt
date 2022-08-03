@@ -14,9 +14,9 @@ Test basic:
 	>>> say_my_name("hello", "there")
 	My name is hello there
 
-Test first_name:
-    >>> say_my_name("SHEJA")
-    My name is SHEJA
+Test firstname:
+	>>> say_my_name("hello")
+	My name is hello
 
 Test last_name empty:
     >>> say_my_name("Sheja","")
