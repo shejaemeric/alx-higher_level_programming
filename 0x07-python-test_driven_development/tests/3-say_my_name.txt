@@ -3,15 +3,32 @@
 
 import function from module:
 
-    >>>say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
 
-test first_name <string> and last_name <string>:
+Test basic:
     >>> say_my_name("SHEJA", "EMERIC")
     My name is SHEJA EMERIC
 
-test passing first_name <string> only:
+Test first_name:
     >>> say_my_name("SHEJA")
     My name is SHEJA 
+
+Test last_name empty:
+    >>> say_my_name("Sheja","")
+    My name is Sheja
+
+Test first_name empty:
+    >>>say_my_name("","Emeric")
+    My name is Emeric
+
+Test both names empty:
+    >>> say_my_name("","")
+    My name is
+
+Test just spaces:
+    >>> say_my_name("   ","  ")
+    My name is  
+   
 
 test passing nothing:
     >>> say_my_name()
