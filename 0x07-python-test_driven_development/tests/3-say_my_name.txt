@@ -1,58 +1,57 @@
 This is a doctest for 3-say_my_name module.
-+__________________________________________________________________________________+
+=======================================================
 
-Using ``3-say_my_name``.
-It is supposed to print a first and last name.
-____________________________________________________________________________________
+import function from module:
 
-Import Module:
-	>>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-____________________________________________________________________________________
+========================================================
+
 Test basic:
-	>>> say_my_name("hello", "there")
-	My name is hello there
+    >>> say_my_name("SHEJA", "EMERIC")
+    My name is SHEJA EMERIC
 
-Test firstname:
-	>>> say_my_name("hello")
-	My name is hello 
+Test first_name:
+    >>> say_my_name("SHEJA")
+    My name is SHEJA 
 
-Test lastname empty:
-	>>> say_my_name("hello", "")
-	My name is hello 
+Test last_name empty:
+    >>> say_my_name("Sheja","")
+    My name is Sheja
+
+Test first_name empty:
+    >>>say_my_name("","Emeric")
+    My name is Emeric
 
 Test both names empty:
-	>>> say_my_name("", "")
-	My name is  
+    >>> say_my_name("","")
+    My name is
 
 Test just spaces:
-	>>> say_my_name("   ", "   ")
-	My name is        
+    >>> say_my_name("   ","  ")
+    My name is  
+   
 
-Test empty firstname:
-	>>> say_my_name("", "hello")
-	My name is  hello
-
-Test not str arg1:
-    >>> say_my_name(33, "hello")
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
-
-Test not str arg2:
-    >>> say_my_name("hello", 98)
-    Traceback (most recent call last):
-    ...
-    TypeError: last_name must be a string
-
-Test not str arg1 arg2:
-    >>> say_my_name(91, 98)
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
-
-Missing 2 args:
+test passing nothing:
     >>> say_my_name()
     Traceback (most recent call last):
     ...
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+test first_name <other data type> and last_name <string>:
+    >>> say_my_name(3,"EMERIC")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test first_name <string> and last_name <other data type>:
+    >>> say_my_name("SHEJA",4.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+test first_name <other data type> and last_name <other data type>:
+    >>> say_my_name(3,3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
