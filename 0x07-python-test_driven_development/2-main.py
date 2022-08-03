@@ -13,5 +13,5 @@ print(matrix_divided([[1,2],[3,4]], 5))
 print(matrix_divided([[1.3,2.5],[3.4,4.5]], 5))
 print(matrix_divided([[1,2],[3,4]], 5.3))
 print(matrix_divided([[1.3,2.5],[3.4,4.5]], 5.2))
-
+print(matrix_divided([[4, 5],[77, 4]], 0))
 print(matrix_divided([[4,5],[77,4]], '6'))
