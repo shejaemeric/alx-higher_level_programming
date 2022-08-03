@@ -5,6 +5,7 @@
 
 
 def lookup(obj):
+
     """lookup : return list of all attributes in function
 
     Args:
@@ -13,4 +14,4 @@ def lookup(obj):
     Returns:
         List: list of all atributes related to class
     """
-    return dir(obj);
+    return dir(obj)
