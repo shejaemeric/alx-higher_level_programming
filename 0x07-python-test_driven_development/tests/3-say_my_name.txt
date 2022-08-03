@@ -16,24 +16,23 @@ Test basic:
 
 Test first_name:
     >>> say_my_name("hello")
-    My name is hello
+    My name is hello 
 
 Test lastname empty:
     >>> say_my_name("hello","")
-    My name is hello
+    My name is  hello
 
 Test both names empty:
     >>> say_my_name("","")
-    My name is
+    My name is  
 
 Test just spaces:
-    >>> say_my_name("   ","  ")
-    My name is
+    >>> say_my_name("  ","  ")
+    My name is      
 
 Test first_name empty:
     >>> say_my_name("","there")
-    My name is there
-
+    My name is  there
    
 test passing nothing:
     >>> say_my_name()
