@@ -10,7 +10,6 @@ class BaseGeometry:
     """
     def area(self):
         """
-            area: prints that the area function has not been implemented
+            area: raises an exception that the area function has not been implemented
         """
-        print("area() is not implemented")
-        
+        raise TypeError("area() is not implemented")
