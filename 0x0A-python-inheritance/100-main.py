@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 MyInt = __import__('100-my_int').MyInt
 
-my_i = MyInt(3)
-print(my_i)
-print(my_i == 3)
-print(my_i != 3)
+i = 2
+list = i.__dir__()
+list.append("helooooooooooooooooooooooooooooooo")
+print((i.__dir__()).append("helooooooooooooooooooooooooooooooo"))
