@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
 bg = BaseGeometry()
 
-bg.integer_validator("a",-98)
+bg.integer_validator("width",78)
