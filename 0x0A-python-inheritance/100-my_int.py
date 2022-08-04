@@ -20,9 +20,9 @@ class MyInt(int):
         Args:
             otherInt (Int): Other int to compare
         """
-        return self != otherInt
+        return not self.real == otherInt
 
-    def __nq__(self, otherInt):
+    def __ne__(self, otherInt):
 
         """
         __nq__: Overriding not equal function of my int
@@ -30,4 +30,4 @@ class MyInt(int):
         Args:
             otherInt (Int): Other int to compare
         """
-        return self == otherInt
+        return not self.real != otherInt
