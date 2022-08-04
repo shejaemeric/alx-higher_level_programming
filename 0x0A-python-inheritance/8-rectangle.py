@@ -12,7 +12,6 @@ class Rectangle(BaseGeometry):
         class for Rectangle attributes: inherit BaseGeometry class
     """
 
-
     def __init__(self, width, height):
 
         """__init__ : initialize class
