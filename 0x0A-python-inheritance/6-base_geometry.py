@@ -3,8 +3,8 @@
     module for BaseGeometry class
 """
 
-class BaseGeometry:
 
+class BaseGeometry:
 
     """
         class for BaseGeometry attributes
