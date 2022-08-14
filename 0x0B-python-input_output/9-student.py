@@ -15,7 +15,7 @@ class Student:
             last_name (string): last_name of student
             age (string): age of student
         """
-        self.irst_name = first_name
+        self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
@@ -25,4 +25,3 @@ class Student:
             to_json return dictionary representation of object.
         """
         return self.__dict__
-        
