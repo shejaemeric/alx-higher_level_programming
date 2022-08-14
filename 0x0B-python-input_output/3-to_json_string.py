@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" module for a function that returns json string of an object"""
 import JSON
+
+""" module for a function that returns json string of an object"""
 
 
 def to_json_string(my_obj):
@@ -12,4 +13,3 @@ def to_json_string(my_obj):
     """
 
     return JSON.dumps(my_obj)
-    
