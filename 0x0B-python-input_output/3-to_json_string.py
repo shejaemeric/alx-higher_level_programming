@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import JSON
-
 """ module for a function that returns json string of an object"""
 
 
