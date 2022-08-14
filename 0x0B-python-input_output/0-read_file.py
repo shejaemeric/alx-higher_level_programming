@@ -10,7 +10,7 @@ def read_file(filename=""):
     Args:
         filename (str, optional): name of the flile. Defaults to "".
     """
-    
+
     with open(filename, 'r', encoding='UTF8') as F_obj:
         read_data = F_obj.read()
-        print (read_data, end='')
+        print(read_data, end='')
