@@ -5,7 +5,8 @@
 def append_write(filename="", text=""):
 
     """
-    append_write: creates a file if it does not exists and wites at the end of it
+    append_write: creates a file if it does not exists /
+    and wites at the end of it
 
     Args:
         filename (str, optional): name of the flile. Defaults to "".
