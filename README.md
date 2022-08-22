@@ -1,3 +1,3 @@
 # alx-higher_level_programming python
-higher2
+higher-2
 project files
