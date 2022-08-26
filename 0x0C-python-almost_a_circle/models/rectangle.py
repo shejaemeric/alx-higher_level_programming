@@ -74,7 +74,7 @@ class Rectangle(Base):
         Args:
             value (int): value to assign to x
         """
-        self.__x = value
+        self.__y = value
 
     @x.setter
     def x(self, value):
