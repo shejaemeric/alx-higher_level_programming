@@ -103,8 +103,10 @@ class Rectangle(Base):
     def display(self):
         """display the rectangle"""
         lis = []
+        print('\n'* (self.y),end='')
         for a in range(0, self.__height):
             for b in range(0, self.__width):
+                lis.append(' '*self.x) if b == 0 else lis.append('')
                 lis.append('#')
             lis.append('\n') if a != self.height-1 else lis.append('')
         print(*lis, sep='')
@@ -114,3 +116,4 @@ class Rectangle(Base):
         return "[Rectangle] ({self.id}) {self.x}/{self.y}"\
             .format(self=self) + " - {self.width}/{self.height}"\
             .format(self=self)
+
