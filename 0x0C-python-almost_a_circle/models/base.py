@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """ documentation for base module"""
 
+
 class Base:
     """class for base data and members"""
-    
-    
+
     __nb_objects = 0
-    
-    def __init__(self,id=None):
-        
-        """ 
+
+    def __init__(self, id=None):
+
+        """
         initialize class
 
         Args:
