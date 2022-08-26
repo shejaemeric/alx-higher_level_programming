@@ -11,7 +11,6 @@ class Rectangle(Base):
     Args:
         Base (class): base class
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
 
         """initialize rectangle class
@@ -23,11 +22,11 @@ class Rectangle(Base):
             y (int, optional): _description_. Defaults to 0.
             id (int, optional): _description_. Defaults to None.
         """
+        self.height = height
+        self.width = width
+        self.x = x
+        self.y = y
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
     @property
     def width(self):
@@ -36,17 +35,17 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """returns width"""
+        """returns height"""
         return self.__height
 
     @property
     def x(self):
-        """returns width"""
+        """returns x"""
         return self.__x
 
     @property
     def y(self):
-        """returns width"""
+        """returns y"""
         return self.__y
 
     @width.setter
@@ -56,25 +55,16 @@ class Rectangle(Base):
         Args:
             value (int): value to assign to width
         """
+        self.setter_validation('width', value)
         self.__width = value
 
     @height.setter
     def height(self, value):
-        """sets height value
-
-        Args:
-            value (int): value to assign to height
-        """
+        '''
+            Setting private attribute
+        '''
+        self.setter_validation("height", value)
         self.__height = value
-
-    @y.setter
-    def y(self, value):
-        """sets x value
-
-        Args:
-            value (int): value to assign to x
-        """
-        self.__y = value
 
     @x.setter
     def x(self, value):
@@ -83,4 +73,25 @@ class Rectangle(Base):
         Args:
             value (int): value to assign to x
         """
+        self.setter_validation('x', value)
         self.__x = value
+
+    @y.setter
+    def y(self, value):
+        """sets y value
+
+        Args:
+            value (int): value to assign to y
+        """
+        self.setter_validation('y', value)
+        self.__y = value
+
+    @staticmethod
+    def setter_validation(attribute, value):
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(attribute))
+        if attribute == "x" or attribute == "y":
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(attribute))
+        elif value <= 0:
+            raise ValueError("{} must be > 0".format(attribute))
