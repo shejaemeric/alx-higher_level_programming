@@ -99,3 +99,12 @@ class Rectangle(Base):
     def area(self):
         """return area of rectangle"""
         return self.__height * self.__width
+
+    def display(self):
+        """display the rectangle"""
+        lis = []
+        for a in range(0,self.__height):
+            for b in range(0,self.__height):
+                lis.append('#')
+            lis.append('\n') if a != self.height-1 else lis.append('')
+        print(*lis, sep = '')
