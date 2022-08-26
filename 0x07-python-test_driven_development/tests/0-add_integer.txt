@@ -1,74 +1,110 @@
-The 0-add_integer test module Using "add_integer" function
-=======================================
+The ``0-add_integer`` module
+======================
 
-Import function from module:
+Using ``add_integer``
+-------------------
 
-	>>> add_integer = __import__('0-add_integer').add_integer
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
 
-Test one int argument:
-    >>> add_integer(1)
-    99
+Checking for module docstring:
+	 >>> m = __import__("0-add_integer").__doc__
+	 >>> len(m) > 1
+	 True
 
-Test one float argument:
-    >>> add_integer(1.2)
-    99.2
+Checking for function docstring:
+	 >>> f = __import__("0-add_integer").add_integer.__doc__
+         >>> len(f) > 1
+         True
 
-Test two int arguments:
-    >>> add_integer(1,2)
-    3
+Checking regular addition:
+	 >>> add_integer(2, 3)
+	 5
 
-Test two int arguments:
-    >>> add_integer(-1,2)
-    1
+Checking positive with negative:
+	 >>> add_integer(2, -4)
+	 -2
 
-Test two int arguments:
-    >>> add_integer(1,-2)
-    -1
+Checking negative with positive:
+	 >>> add_integer(-6, 8)
+	 2
 
-Test two float arguments:
-    >>> add_integer(1.3,2.5)
-    3.8
+Checking addition over multiple values:
+	 >>> [add_integer(i, i ** 2) for i in range(6)]
+	 [0, 2, 6, 12, 20, 30]
 
-Test one int and one float arguments:
-    >>> add_integer(1.5,2)
-    3.5
+Checking float with int:
+	 >>> add_integer(2.1, 4)
+	 6
 
-Test one other and one int arguments:
-    >>> add_integer("hello",2)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+Checking int with float:
+	 >>> add_integer(5, 7.8)
+	 12
 
-Test one other and one int arguments:
-    >>> add_integer(1,"hello")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
+Checking both float:
+	 >>> add_integer(2.45, 3.1)
+	 5
 
-Test two other arguments:
-    >>> add_integer("hello","there")
-        Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+Checking for passed NaN:
+	 >>> add_integer(1, float('nan'))
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: cannot convert float NaN to integer
 
-Test 2 long ints:
-	>>> add_integer(11111111, 22222222)
-	33333333
+Checking for passed inf:
+	 >>> add_integer(1, float('inf'))
+	 Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
 
-Add infinity:
-	>>> add_integer(float('inf'), float(-inf))
-	Traceback (most recent call last):
-	...
-	OverflowError: cannot convert float infinity to integer.
+Checking super long int:
+	 >>> add_integer(999999999999999999999999999999, 1)
+	 1000000000000000000000000000000
 
-Add NaN:
-	>>> add_integer(1, float('Nan')
-	Traceback (most recent call last):
-	...
-	ValueError: cannot convert float NaN to integer.
+Checking non-number with number:
+	 >>> add_integer([1], 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: a must be an integer
 
-Test float overflow:
-	>>> add_integer(float('inf'), 0)
-	Traceback (most recent call last):
-        ...
-	OverflowError: cannot convert float infinity to int.
+Checking number with non-number:
+	 >>> add_integer(3, "2")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: b must be an integer
+
+Checking non-number with non-number:
+	 >>> add_integer((2,), {"key": "value"})
+         Traceback (most recent call last):
+         ...
+         TypeError: a must be an integer
+
+Checking bool with number:
+	 >>> add_integer(True, 1)
+	 Traceback (most recent call last):
+         ...
+         TypeError: a must be an integer
+
+Checking number with bool:
+	 >>> add_integer(0, False)
+         Traceback (most recent call last):
+         ...
+         TypeError: b must be an integer
+
+Checking no args:
+	 >>> add_integer()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+Checking one arg:
+	 >>> add_integer(1)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: add_integer() missing 1 required positional argument: 'b'
+
+Checking more than 2 args:
+	 >>> add_integer(1, 2, 3)
+         Traceback (most recent call last):
+         ...
+         TypeError: add_integer() takes 2 positional arguments but 3 were given
