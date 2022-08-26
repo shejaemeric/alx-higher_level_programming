@@ -103,12 +103,14 @@ class Rectangle(Base):
     def display(self):
         """display the rectangle"""
         lis = []
-        for a in range(0,self.__height):
-            for b in range(0,self.__width):
+        for a in range(0, self.__height):
+            for b in range(0, self.__width):
                 lis.append('#')
             lis.append('\n') if a != self.height-1 else lis.append('')
-        print(*lis, sep = '')
+        print(*lis, sep='')
 
     def __str__(self):
         """overiding str function"""
-        return "[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}".format(self=self)
+        return "[Rectangle] ({self.id}) {self.x}/{self.y}"\
+            .format(self=self) + " - {self.width}/{self.height}"\
+            .format(self=self)
