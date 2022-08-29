@@ -131,3 +131,4 @@ class Rectangle(Base):
                 self.x = args[index]
             elif index == 4:
                 self.y = args[index]
+            index += 1
