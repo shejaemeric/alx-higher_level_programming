@@ -76,7 +76,7 @@ class Square(Rectangle):
         """return square dictionary"""
         d = {}
         d["id"] = self.id
-        d["width"] = self.width
+        d["size"] = self.width
         d["x"] = self.x
         d["y"] = self.y
         return d
