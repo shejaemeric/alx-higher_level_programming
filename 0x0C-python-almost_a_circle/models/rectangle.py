@@ -127,18 +127,16 @@ class Rectangle(Base):
                     self.y = args[index]
                 index += 1
             return
-        if kwargs is not None:
-            for key, value in kwargs.items():
-                if key == "id":
-                    super().__init__(value)
-                elif key == "width":
-                    self.width = value
-                elif key == "height":
-                    self.height = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+        if "id" in kwargs:
+            self.id = kwargs["id"]
+        if "height" in kwargs:
+            self.height = kwargs["height"]
+        if "width" in kwargs:
+            self.width = kwargs["width"]
+        if "x" in kwargs:
+            self.x = kwargs["x"]
+        if "y" in kwargs:
+            self.y = kwargs["y"]
 
     def to_dictionary(self):
         """return rectangle dictionary"""
@@ -148,3 +146,4 @@ class Rectangle(Base):
         d["height"] = self.height
         d["x"] = self.x
         d["y"] = self.y
+        return d
