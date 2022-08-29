@@ -117,18 +117,32 @@ class Rectangle(Base):
             .format(self=self) + " - {self.width}/{self.height}"\
             .format(self=self)
 
-    def update(self, *args):
-        """Update class using *args"""
+    def update(self, *args, **kwargs):
+        """Update class using *args or **kwargs"""
         index = 0
-        for arg in args:
-            if index == 0:
-                super().__init__(args[index])
-            elif index == 1:
-                self.width = args[index]
-            elif index == 2:
-                self.height = args[index]
-            elif index == 3:
-                self.x = args[index]
-            elif index == 4:
-                self.y = args[index]
-            index += 1
+        if len(args) > 1:
+            for arg in args:
+                if index == 0:
+                    super().__init__(args[index])
+                elif index == 1:
+                    self.width = args[index]
+                elif index == 2:
+                    self.height = args[index]
+                elif index == 3:
+                    self.x = args[index]
+                elif index == 4:
+                    self.y = args[index]
+                index += 1
+            return
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                if key == "id":
+                    super().__init__(value)
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
