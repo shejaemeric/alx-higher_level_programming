@@ -22,7 +22,6 @@ class Square(Rectangle):
             y (int, optional): _description_. Defaults to 0.
             id (_type_, optional): _description_. Defaults to None.
         """
-        self.size = size
         super().__init__(size, size, x, y, id)
 
 
@@ -34,7 +33,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """return size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -46,4 +45,3 @@ class Square(Rectangle):
         super().setter_validation("width",value)
         self.width = value
         self.height = value
-        self.__size = value
