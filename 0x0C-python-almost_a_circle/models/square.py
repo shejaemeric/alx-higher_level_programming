@@ -71,4 +71,3 @@ class Square(Rectangle):
             self.x = kwargs["x"]
         if "y" in kwargs:
             self.y = kwargs["y"]
-
