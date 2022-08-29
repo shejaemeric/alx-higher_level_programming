@@ -22,7 +22,7 @@ class Square(Rectangle):
             y (int, optional): _description_. Defaults to 0.
             id (_type_, optional): _description_. Defaults to None.
         """
-        super().__init__(size,size,x,y,id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """ return representation of a string"""
