@@ -102,14 +102,7 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle"""
-        lis = []
-        print('\n' * (self.y), end='')
-        for a in range(0, self.__height):
-            for b in range(0, self.__width):
-                lis.append(' '*self.x) if b == 0 else lis.append('')
-                lis.append('#')
-            lis.append('\n') if a != self.height-1 else lis.append('')
-        print(*lis, sep='')
+        print(('\n' * self.__y) + '\n'.join(((' ' * self.__x) + ('#' * self.__width)) for i in range(self.__height)))
 
     def __str__(self):
         """overiding str function"""
