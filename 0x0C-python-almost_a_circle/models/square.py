@@ -44,3 +44,31 @@ class Square(Rectangle):
         super().setter_validation("width", value)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """updates an object"""
+        if len(args) > 0:
+            index = 0
+            for arg in args:
+                if index == 0:
+                    self.id = args[index]
+                elif index == 1:
+                    self.width = args[index]
+                    self.height = args[index]
+                elif index == 2:
+                    self.x = args[index]
+                elif index == 3:
+                    self.y = args[index]
+
+                index += 1
+            return
+        if "id" in kwargs:
+            self.id = kwargs["id"]
+        if "size" in kwargs:
+            self.width = kwargs["size"]
+            self.height = kwargs["size"]
+        if "x" in kwargs:
+            self.x = kwargs["x"]
+        if "y" in kwargs:
+            self.y = kwargs["y"]
+
