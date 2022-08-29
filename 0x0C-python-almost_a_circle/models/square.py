@@ -24,7 +24,6 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """ return representation of a string"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}"\
@@ -42,6 +41,6 @@ class Square(Rectangle):
         Args:
             value (int): value to assign to size
         """
-        super().setter_validation("width",value)
+        super().setter_validation("width", value)
         self.width = value
         self.height = value
