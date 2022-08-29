@@ -124,9 +124,9 @@ class Rectangle(Base):
             if index == 0:
                 super().__init__(args[index])
             elif index == 1:
-                self.height = args[index]
-            elif index == 2:
                 self.width = args[index]
+            elif index == 2:
+                self.height = args[index]
             elif index == 3:
                 self.x = args[index]
             elif index == 4:
