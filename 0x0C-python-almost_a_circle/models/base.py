@@ -43,5 +43,5 @@ class Base:
         if list_objs is not None:
             for item in list_objs:
                 lo.append(cls.to_dictionary(item))
-        with open(name,'w') as F:
+        with open(name, 'w') as F:
             F.write(cls.to_json_string(lo))
