@@ -45,3 +45,14 @@ class Base:
                 lo.append(cls.to_dictionary(item))
         with open(name, 'w') as F:
             F.write(cls.to_json_string(lo))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """deserialize a jason string
+
+        Args:
+            json_string (_type_): _description_
+        """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
