@@ -22,8 +22,9 @@ class Square(Rectangle):
             y (int, optional): _description_. Defaults to 0.
             id (_type_, optional): _description_. Defaults to None.
         """
-        super().__init__(size, size, x, y, id)
         self.size = size
+        super().__init__(size, size, x, y, id)
+
 
     def __str__(self):
         """ return representation of a string"""
@@ -42,4 +43,7 @@ class Square(Rectangle):
         Args:
             value (int): value to assign to size
         """
+        super().setter_validation("width",value)
+        self.width = value
+        self.height = value
         self.__size = value
