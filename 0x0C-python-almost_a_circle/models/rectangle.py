@@ -116,3 +116,18 @@ class Rectangle(Base):
         return "[Rectangle] ({self.id}) {self.x}/{self.y}"\
             .format(self=self) + " - {self.width}/{self.height}"\
             .format(self=self)
+
+    def update(self, *args):
+        """Update class using *args"""
+        index = 0
+        for arg in args:
+            if index == 0:
+                super().__init__(args[index])
+            elif index == 1:
+                self.height = args[index]
+            elif index == 2:
+                self.width = args[index]
+            elif index == 3:
+                self.x = args[index]
+            elif index == 4:
+                self.y = args[index]
