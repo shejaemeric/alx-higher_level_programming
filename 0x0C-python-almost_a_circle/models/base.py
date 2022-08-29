@@ -2,6 +2,9 @@
 """ documentation for base module"""
 
 
+import json
+
+
 class Base:
     """class for base data and members"""
 
@@ -20,3 +23,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """return json representation"""
+        return json.dumps(list_dictionaries)
