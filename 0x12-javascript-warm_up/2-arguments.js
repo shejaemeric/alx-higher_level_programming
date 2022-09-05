@@ -1,7 +1,7 @@
 #!/usr/bin/node
 import { argv } from 'node:process';
 
-let count = process.argv.length();
+let count = process.argv.length;
 if (count == 2)
     console.log("No argument")
 else if(count == 3)
