@@ -66,3 +66,20 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """load from json file"""
+        name = cls.__name__ + ".json"
+        if !(name e):
+            return []
+        with open(name,'r') as F:
+            str = F.read()
+        return cls.from_json_string(str)
+
+Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:
+
+The filename must be: <Class name>.json - example: Rectangle.json
+If the file doesn’t exist, return an empty list
+Otherwise, return a list of instances - the type of these instances depends on cls (current class using this method)
+You must use the from_json_string and create methods (implemented previously)
