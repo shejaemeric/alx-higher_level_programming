@@ -1,9 +1,9 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-
-function fact(n)
-{
-    return n*factorial(n-1)
+function fact (n) {
+  if (isNaN(n) || n === 0) {
+    return 1
+  }
+    return n * fact (n - 1)
 }
-let n = parseInt(argv[0])
-console.log(fact(n))
+let n = parseInt(process.argv[2]);
+console.log(fact(n));
