@@ -25,3 +25,5 @@ if __name__ == "__main__":
         st.append(item[0])
 
     print(', '.join(st))
+    cur.close()
+    db.close()

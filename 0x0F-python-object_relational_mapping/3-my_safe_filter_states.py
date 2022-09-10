@@ -20,3 +20,6 @@ if __name__ == "__main__":
     res = cur.fetchall()
     for item in res:
         print(item)
+
+    cur.close()
+    db.close()
