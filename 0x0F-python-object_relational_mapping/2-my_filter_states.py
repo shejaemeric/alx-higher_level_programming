@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """sql module"""
 
-from ast import keyword
 import MySQLdb
 import sys
 
