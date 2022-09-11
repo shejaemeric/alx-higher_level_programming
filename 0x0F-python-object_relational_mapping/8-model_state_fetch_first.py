@@ -2,6 +2,7 @@
 """fetch first state python"""
 
 import sys
+from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
@@ -12,6 +13,7 @@ engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
                                sys.argv[3]),
                        pool_pre_ping=True)
 
+Base.metadata.create_all(engine)
 session = sessionmaker(bind=engine)
 session = session()
 
