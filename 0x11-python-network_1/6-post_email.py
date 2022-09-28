@@ -7,4 +7,4 @@ import sys
 if __name__ == "__main__":
     url = (sys.argv) [1]
     param = {'email': (sys.argv) [2]}
-    print(requests.get(url,param).content)
+    print(requests.get(url,params = param))
