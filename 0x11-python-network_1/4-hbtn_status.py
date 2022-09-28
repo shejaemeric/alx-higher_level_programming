@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# connect and fetch using requests library
+"""connect and fetch using requests library"""
 
 import requests
 
