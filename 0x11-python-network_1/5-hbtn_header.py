@@ -7,4 +7,7 @@ import sys
 if __name__ == "__main__":
     req = sys.argv
     res = requests.get(req[1])
-    print(res.headers['X-Request-Id'])
+    if hasattr(res, 'X-Request-Id'):
+        print(res.headers['X-Request-Id'])
+    else:
+        print("None")
