@@ -2,9 +2,9 @@
 """connect and fetch using requests library and get X-Request-Id"""
 
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    url = (sys.argv) [1]
-    param = {'email': (sys.argv) [2]}
-    print(requests.get(url,params = param))
+    payload = {'email': argv[2]}
+    r = requests.post(argv[1], data=payload)
+    print(r.text)
