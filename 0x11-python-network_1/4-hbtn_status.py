@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # connect and fetch using requests library
 
-from urllib import request
 import requests
 
 if __name__ == "__main__":
